@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd `dirname $0`
+keywords="$@"
+
+param=${keywords// /\+}
+`cat ./browser` "https://www.youtube.com/results?search_query=${param}"

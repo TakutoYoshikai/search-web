@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd `dirname $0`
+keywords="$@"
+param=${keywords// /\+}
+`cat ./browser` "https://www.google.com/search?client=ubuntu&channel=fs&q=${param}&ie=utf-8&oe=utf-8"

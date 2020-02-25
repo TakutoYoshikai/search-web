@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd `dirname $0`
+keywords="$@"
+param=${keywords// /\+}
+`cat browser` "https://www.amazon.co.jp/s?k=${param}"
